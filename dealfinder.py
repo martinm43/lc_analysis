@@ -1,4 +1,4 @@
-w#-*-coding:utf8;-*-
+#-*-coding:utf8;-*-
 #qpy:2
 #qpy:console
 
