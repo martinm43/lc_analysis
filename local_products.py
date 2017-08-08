@@ -25,9 +25,9 @@ def get_prodno(prod_id):
   
   import sqlite3
   
-  phone='/storage/emulated/0/download/'  
-
-  sqlite_file = phone+'lcbo_db.sqlite' # name of the sqlite database file 
+  import os
+  cwd=os.getcwd()+'/'
+  sqlite_file = cwd+'lcbo_db.sqlite' # name of the sqlite database file 
  
   conn = sqlite3.connect(sqlite_file) 
   c = conn.cursor()
@@ -39,12 +39,14 @@ def get_prodno(prod_id):
 
 if __name__ == '__main__':
   #Folder with database
-  phone='/storage/emulated/0/download/'
-  
+  import os
+  cwd=os.getcwd()+'/'
+
   #Get stores
   #qstorelist=[366,1,362]
   from storeselectah import storeselect
   storelist=storeselect()  
+  print(storelist)
   
   #Get data from database: list of products on sale?
   from dealfinder import deals
@@ -58,10 +60,11 @@ if __name__ == '__main__':
   #1849 is Zubrowka
   #846 is Wyndham Bin 555 Shiraz
   #229 is rev
-  qproduct=198
+  qproduct=846
   qproductno=get_prodno(qproduct)
-  qproductno=qproductno[0][0]
+
   print qproductno
+  qproductno=qproductno[0][0]
   
   #print dealslist[0][0]
   #qproduct=dealslist[0][0]    
