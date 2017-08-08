@@ -3,11 +3,12 @@
 #qpy:console
 
 def storeselect():
-  phone=''
+  import os
+  cwd=os.getcwd()+'/'
 
   import sqlite3
 
-  conn=sqlite3.connect(phone+'lcbo_db.sqlite')
+  conn=sqlite3.connect(cwd+'lcbo_db.sqlite')
   c=conn.cursor()
 
   from location import coord_gps
