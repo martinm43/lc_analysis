@@ -33,10 +33,11 @@ def product_updater(qstr,min_page,max_page):
 def create_db(table_name):
   import sqlite3
   
-  #This changes based on the platform.  
-  phone='' 
+  #This changes based on the platform.
+  import os
+  cwd=os.getcwd()   
   
-  sqlite_file = phone+'lcbo_db.sqlite' # name of the sqlite database file # name of the table to be created 
+  sqlite_file = cwd+'lcbo_db.sqlite' # name of the sqlite database file # name of the table to be created 
   
   #ALWAYS HAVE PRIMARY KEYS
   new_field = 'id' # name of the column 
@@ -91,9 +92,10 @@ def sqldatahandler(val):
  
 def col_creator(table_name,lcbo_dict):
   import sqlite3
-  phone=''  
+  import os
+  cwd=os.getcwd()  
 
-  sqlite_file = phone+'lcbo_db.sqlite' # name of the sqlite database file 
+  sqlite_file = cwd+'lcbo_db.sqlite' # name of the sqlite database file 
  
   conn = sqlite3.connect(sqlite_file) 
   c = conn.cursor()
@@ -118,8 +120,9 @@ def col_creator(table_name,lcbo_dict):
 
 def insert_data(table_name,lcbo_dict):
   import sqlite3
-  phone=''
-  conn = sqlite3.connect(phone+'lcbo_db.sqlite')
+  import os
+  cwd=os.getcwd()
+  conn = sqlite3.connect(cwd+'lcbo_db.sqlite')
   cursor = conn.execute('select * from '+table_name)
   names = [description[0] for description in cursor.description]
   #print names
@@ -162,9 +165,6 @@ def insert_data(table_name,lcbo_dict):
 
 #An "outline" for what functions are actually run.
 if __name__ == '__main__':
-  #Globals and constants
-  phone=''
-  
   #Query variables
   PG_MIN=1
   PG_MAX=1005

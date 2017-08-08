@@ -1,15 +1,13 @@
 #-*-coding:utf8;-*-
 #qpy:2
 #qpy:console
-
-print "Not verified by Young Metro"
-
-phone=''
+import os
+cwd=os.getcwd()
 
 import sqlite3
 from pprint import pprint
 
-conn=sqlite3.connect(phone+'lcbo_db_test.sqlite')
+conn=sqlite3.connect(cwd+'lcbo_db_test.sqlite')
 c=conn.cursor()
 
 print 'SQL explorer'

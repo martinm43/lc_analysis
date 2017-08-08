@@ -3,11 +3,12 @@
 #qpy:console
 
 def deals():
-  phone='/storage/emulated/0/download/'
-
+  import os
   import sqlite3
 
-  conn=sqlite3.connect(phone+'lcbo_db.sqlite')
+  cwd=os.getcwd()
+
+  conn=sqlite3.connect(cwd+'lcbo_db.sqlite')
   c=conn.cursor()
 
   str_input='SELECT id,name,primary_category,secondary_category,tertiary_category\
@@ -16,7 +17,6 @@ def deals():
   return result
 
 if __name__=="__main__":
-  from pprint import pprint
   data=deals()
   for d in data:
     print d
