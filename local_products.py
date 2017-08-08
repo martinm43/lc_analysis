@@ -60,11 +60,12 @@ if __name__ == '__main__':
   #1849 is Zubrowka
   #846 is Wyndham Bin 555 Shiraz
   #229 is rev
-  qproduct=846
-  qproductno=get_prodno(qproduct)
+  #qproduct=846
+  #qproductno=get_prodno(qproduct)
 
-  print qproductno
-  qproductno=qproductno[0][0]
+  #print qproductno
+  #qproductno=qproductno[0][0]
+  qproductno=676841 #red stripe
   
   #print dealslist[0][0]
   #qproduct=dealslist[0][0]    
