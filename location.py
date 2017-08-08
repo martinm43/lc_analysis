@@ -7,4 +7,7 @@ def coord_ip():
 	lat = j['latitude'] 
 	lon = j['longitude']
 	return [lat,lon]
-			 
+
+if __name__=="__main__":
+    a=coord_ip()
+    print a
