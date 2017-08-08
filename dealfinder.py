@@ -1,4 +1,4 @@
-#-*-coding:utf8;-*-
+w#-*-coding:utf8;-*-
 #qpy:2
 #qpy:console
 
@@ -8,7 +8,7 @@ def deals():
 
   cwd=os.getcwd()
 
-  conn=sqlite3.connect(cwd+'lcbo_db.sqlite')
+  conn=sqlite3.connect(cwd+'/'+'lcbo_db.sqlite')
   c=conn.cursor()
 
   str_input='SELECT id,name,primary_category,secondary_category,tertiary_category\
