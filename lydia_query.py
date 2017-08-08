@@ -3,12 +3,12 @@
 #Rieslings from Alsace with low sugar content and price
 #MA Miller Apr 24 2016
 
-#special directory for qpython, not needed here
-phone=''
+import os
+cwd=os.getcwd()+'/'
 
 import sqlite3
 
-conn=sqlite3.connect(phone+'lcbo_db.sqlite')
+conn=sqlite3.connect(cwd+'lcbo_db.sqlite')
 c=conn.cursor()
 
 #get query
