@@ -41,9 +41,10 @@ def product_updater(qstr,min_page,max_page):
 #An "outline" for what functions are actually run.
 if __name__ == '__main__':
   #Globals and constants 
-  phone=''
+  import os
+  cwd=os.getcwd()+'/'
   dbname='lcbo_db_test.sqlite'
-  fullpath=phone+dbname
+  fullpath=cwd+dbname
   
   #Query variables
   PG_MIN=1
