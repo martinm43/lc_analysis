@@ -42,12 +42,12 @@ def product_updater(qstr,min_page,max_page):
 if __name__ == '__main__':
   #Globals and constants 
   phone=''
-  dbname='lcbo_db_test.sqlite'
+  dbname='lcbo_db.sqlite'
   fullpath=phone+dbname
   
   #Query variables
   PG_MIN=1
-  PG_MAX=600
+  PG_MAX=620
   target='products'
   
   #Get data from API
