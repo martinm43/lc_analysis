@@ -8,6 +8,18 @@ def coord_ip():
 	lon = j['longitude']
 	return [lat,lon]
 
+
+def coord_termux_gps():
+	import os
+	import json
+	termux_location=os.popen('termux-location').read() 
+	j = json.loads(termux_location)
+	lat = j['latitude'] 
+	lon = j['longitude']
+	return [lat,lon]
+
 if __name__=="__main__":
     a=coord_ip()
+    b=coord_termux_gps()
     print a
+    print b

@@ -11,8 +11,8 @@ def storeselect():
   conn=sqlite3.connect(cwd+'lcbo_db.sqlite')
   c=conn.cursor()
 
-  from location import coord_ip
-  a=coord_ip()
+  from location import coord_termux_gps, coord_ip
+  a=coord_termux_gps()
   location_lat=str(a[0])
   location_lng=str(a[1])
 
