@@ -41,17 +41,10 @@ def product_updater(qstr,min_page,max_page):
 #An "outline" for what functions are actually run.
 if __name__ == '__main__':
   #Globals and constants 
-<<<<<<< HEAD
   import os
   cwd=os.getcwd()+'/'
-  dbname='lcbo_db_test.sqlite'
-  fullpath=cwd+dbname
-=======
-  phone=''
   dbname='lcbo_db.sqlite'
-  fullpath=phone+dbname
->>>>>>> branch 'master' of https://github.com/martinm43/turnup.git
-  
+  fullpath=cwd+dbname
   #Query variables
   PG_MIN=1
   PG_MAX=620
