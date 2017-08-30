@@ -1,11 +1,6 @@
 # coding: utf-8
-class Person(Model):
-    name = CharField()
-    birthday = DateField()
-    is_relative = BooleanField()
-    class Meta:
-        database=db
-        
+# %load peewee_try_2
+# %load peewee_orm_docs_examples
 from peewee import *
 db = SqliteDatabase('people.db')
 class Person(Model):
@@ -29,9 +24,6 @@ from datetime import date
 uncle_bob=Person(name='Bob',birthday=date(1960,1,15),is_relative=True)
 uncle_bob.save()
 grandma=Person.create(name='Grandma',birthday=date(1935,3,1),is_relative=True)
-herb=Person.create(name='Herb',birthday=(1950,5,5),is_relative=False)
-herb=Person.create(name='Herb',birthday=(1950,5,5),is_relative=False)
-herb=Person.create(name='Herb', birthday=(1950,5,5), is_relative=False)
 herb=Person.create(name='Herb',birthday=date(1950,5,5),is_relative=False)
 grandma.name = 'Grandma L.'
 grandma.save()
@@ -43,7 +35,6 @@ bob_kitty.save()
 herb_fido.save()
 herb_mittens.save()
 herb_mittens_jr.save()
-her_mittens.delete_instance()
 herb_mittens.delete_instance()
 herb_fido.owner=uncle_bob
 herb_fido.save()
