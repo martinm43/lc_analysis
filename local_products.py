@@ -66,8 +66,7 @@ if __name__ == '__main__':
 
   #print qproductno
   #qproductno=qproductno[0][0]
-  qproductno=676841 #red stripe
-  
+  qproductno=raw_input('Please enter id of product: ')  
   #print dealslist[0][0]
   #qproduct=dealslist[0][0]    
   
