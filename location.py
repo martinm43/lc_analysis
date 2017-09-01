@@ -9,10 +9,10 @@ def coord_ip():
 	return [lat,lon]
 
 
-def coord_termux_gps():
+def coord_termux():
 	import os
 	import json
-	termux_location=os.popen('termux-location').read() 
+	termux_location=os.popen('termux-location -p network').read() 
 	j = json.loads(termux_location)
 	lat = j['latitude'] 
 	lon = j['longitude']
