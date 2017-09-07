@@ -12,7 +12,11 @@ def storeselect():
   c=conn.cursor()
 
   from location import coord_termux, coord_ip
+  
   a=coord_termux()
+  if a==None:
+	print('GPS based locations from termux unsuccessful, using IP address: ')
+	a=coord_ip()
   location_lat=str(a[0])
   location_lng=str(a[1])
 

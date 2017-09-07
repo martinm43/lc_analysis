@@ -10,10 +10,16 @@ def coord_ip():
 
 
 def coord_termux():
+	#For now network only. They seem to be having issues with h/w
+        #6 Sep 2017
 	import os
 	import json
 	termux_location=os.popen('termux-location -p network').read() 
-	j = json.loads(termux_location)
+	try:
+		j = json.loads(termux_location)
+	except ValueError:
+		print('No value found for coordinates')
+		return
 	lat = j['latitude'] 
 	lon = j['longitude']
 	return [lat,lon]
