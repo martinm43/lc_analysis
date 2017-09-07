@@ -1,4 +1,3 @@
-
 import urllib2
 import json
 from pprint import pprint
@@ -45,13 +44,16 @@ if __name__ == '__main__':
 
   #Get stores
   #qstorelist=[366,1,362]
-  from storeselectah import storeselect
-  storelist=storeselect()  
+  from closest_stores import storeselect
+  store_num=raw_input('How many stores would you like to search?: ')
+  storelist=storeselect(range=store_num)
   print(storelist)
   
   #Get data from database: list of products on sale?
-  from dealfinder import deals
-  dealslist=deals()
+  #NOTE: NOT USED BUT SHOULD BE. INTEGRATE THIS INTO
+  #THE NEW DEALS (HAS LIMITED TIME OFFER) SCRIPT
+  #from dealfinder import deals
+  #dealslist=deals()
   
   #The issue is fixed. Use prod no not your own ids
   #Sample test ids (5)

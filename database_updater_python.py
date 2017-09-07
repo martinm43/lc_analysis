@@ -6,8 +6,8 @@
 
 from lcbo_db_models import db, Stores, Products
 from lcbo_list_updater import lcbo_list_updater
-assumed_max_pages_stores=2 #100 debug edit
-assumed_max_pages_products=2 #2000 debug edit
+assumed_max_pages_stores=100 #100 debug edit
+assumed_max_pages_products=2000 #2000 debug edit
 
 #Part I: Get maximum number of variables that can be inserted based on system
 #SQLite parameters. 

@@ -1,5 +1,3 @@
-
-	
 #Rieslings from Alsace with low sugar content and price
 #MA Miller Apr 24 2016
 
