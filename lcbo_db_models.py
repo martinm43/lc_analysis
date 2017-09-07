@@ -12,12 +12,13 @@ class BaseModel(Model):
     class Meta:
         database = database
 
+#Manually edited to correct a few auto-generated *Fields.
 class Products(BaseModel):
     alcohol_content = IntegerField(null=True)
     bonus_reward_miles = IntegerField(null=True)
-    bonus_reward_miles_ends_on = UnknownField(null=True)  # NUMERIC
+    bonus_reward_miles_ends_on = DateField(null=True)  
     clearance_sale_savings_in_cents = IntegerField(null=True)
-    description = UnknownField(null=True)  # NUMERIC
+    description = TextField(null=True)  # NUMERIC
     has_bonus_reward_miles = IntegerField(null=True)
     has_clearance_sale = IntegerField(null=True)
     has_limited_time_offer = IntegerField(null=True)
@@ -48,19 +49,19 @@ class Products(BaseModel):
     producer_name = TextField(null=True)
     product_no = IntegerField(null=True)
     regular_price_in_cents = IntegerField(null=True)
-    released_on = UnknownField(null=True)  # NUMERIC
+    released_on = DateField(null=True)  
     secondary_category = TextField(null=True)
-    serving_suggestion = UnknownField(null=True)  # NUMERIC
+    serving_suggestion = TextField(null=True)  
     stock_type = TextField(null=True)
     style = TextField(null=True)
-    sugar_content = UnknownField(null=True)  # NUMERIC
-    sugar_in_grams_per_liter = UnknownField(null=True)  # NUMERIC
+    sugar_content = TextField(null=True)  
+    sugar_in_grams_per_liter = IntegerField(null=True)  
     tags = TextField(null=True)
-    tasting_note = UnknownField(null=True)  # NUMERIC
+    tasting_note = TextField(null=True)  
     tertiary_category = TextField(null=True)
     total_package_units = IntegerField(null=True)
     updated_at = TextField(null=True)
-    value_added_promotion_description = UnknownField(null=True)  # NUMERIC
+    value_added_promotion_description = TextField(null=True)  
     varietal = TextField(null=True)
     volume_in_milliliters = IntegerField(null=True)
 

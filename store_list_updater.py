@@ -23,7 +23,7 @@ def store_updater(qstr,min_page,max_page):
     
     #handling each individual dict
     for i in sublist:
-      i['page']=data['pager']['current_page']
+      #i['page']=data['pager']['current_page']
       store_list.append(i)
       
     stopflag=data['pager']['is_final_page']
