@@ -37,10 +37,12 @@ def max_sql_variables():
     cur.close()
     db.close()
     return low
-max_sql_variables()
 
-SQLITE_MAX_VARIABLE_NUMBER=max_sql_variables()
+#Do not work on pi
+#max_sql_variables()
 
+#SQLITE_MAX_VARIABLE_NUMBER=max_sql_variables()
+SQLITE_MAX_VARIABLE_NUMBER=500
 
 #Obtain stores data.
 storedata=lcbo_list_updater('stores',1,assumed_max_pages_stores)
