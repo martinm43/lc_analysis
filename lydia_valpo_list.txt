@@ -1,0 +1,40 @@
+Names of products containing query string valpo that are on sale are as follows (with price in cents):
+Masi Bonacosta Valpolicella Classico DOC, costing 1445 cents
+Tedeschi Amarone Della Valpolicella, costing 3995 cents
+Zenato Ripassa Valpolicella Superiore, costing 2495 cents
+Cesari Mara Valpolicella Ripasso Superiore DOC, costing 1645 cents
+
+
+At local store Barrack & King
+15 units of Masi Bonacosta Valpolicella Classico DOC
+18 units of Tedeschi Amarone Della Valpolicella
+0 units of Zenato Ripassa Valpolicella Superiore
+27 units of Cesari Mara Valpolicella Ripasso Superiore DOC
+
+
+At local store Princess & Concession
+48 units of Masi Bonacosta Valpolicella Classico DOC
+20 units of Tedeschi Amarone Della Valpolicella
+18 units of Zenato Ripassa Valpolicella Superiore
+0 units of Cesari Mara Valpolicella Ripasso Superiore DOC
+
+
+At local store Division St. & John Counter Blvd.
+20 units of Masi Bonacosta Valpolicella Classico DOC
+27 units of Tedeschi Amarone Della Valpolicella
+23 units of Zenato Ripassa Valpolicella Superiore
+0 units of Cesari Mara Valpolicella Ripasso Superiore DOC
+
+
+At local store Queen Mary & Bath
+53 units of Masi Bonacosta Valpolicella Classico DOC
+23 units of Tedeschi Amarone Della Valpolicella
+30 units of Zenato Ripassa Valpolicella Superiore
+0 units of Cesari Mara Valpolicella Ripasso Superiore DOC
+
+
+At local store Midland & Princess
+56 units of Masi Bonacosta Valpolicella Classico DOC
+26 units of Tedeschi Amarone Della Valpolicella
+30 units of Zenato Ripassa Valpolicella Superiore
+10 units of Cesari Mara Valpolicella Ripasso Superiore DOC
