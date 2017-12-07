@@ -4,6 +4,10 @@ from pprint import pprint
 import urllib
 
 def single_inventory(store,productno):
+  """
+  Takes store number, product number and returns the quantity of product
+  or lack thereof
+  """
   #api_key and initializers
   eggs='MDplNzU3ZjMwNC1mYjkwLTExZTUtODQwYS0xYmFhMTY3ZWUxZWQ6clhlQnAwZFhCNXJvNnJuYWl0SXJQNzYxQWxUaGFhd0hYb0hL'
   #resulting json file is 7 MB
@@ -13,12 +17,14 @@ def single_inventory(store,productno):
   request_str='https://lcboapi.com/stores/'+str(store)+'/products/'+str(productno)+'/inventory'
   
   try:
+  #print(request_str)
     req = urllib2.Request(request_str)
     req.add_header('Authorization', 'Token '+eggs)
     data = json.load(urllib2.urlopen(req))
     return data['result']
   except:
     print 'Inventory cannot be found. Product may be rare or have never been carried here.'
+    print 'Alternatively, check your code :P'
     return
  
 def get_prodno(prod_id):
