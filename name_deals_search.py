@@ -1,14 +1,20 @@
+"""
+Looks for the number of units near a hardcoded 
+lat and long using a query string. Returns the number of X products
+in each store
+"""
+
+import sys
 from local_products import single_inventory
 from lcbo_db_models import Products
 from closest_stores import storeselect
 
 #Sample string and coordinates but you can always
 #substitute your own
-query_str='cote'
 coord_lat=43.72
 coord_lon=-79.58
 
-query=Products.select().where((Products.name.contains(query_str))&\
+query=Products.select().where((Products.name.contains(sys.argv[1]))&\
                       (Products.has_limited_time_offer==1))
 
 products_list=[[i.name,i.id,i.price_in_cents] for i in query]
@@ -17,9 +23,9 @@ store_list=storeselect(coord='MANUAL',input_lat=coord_lat.__str__(),input_lon=co
 #print(products_list)
 #print(store_list)
 
-print('Names of products containing query string '+query_str+ ' that are on sale are as follows (with price in cents):')
+print('Names of products containing query string '+sys.argv[1]+ ' that are on sale are as follows (with price in cents):')
 for p in products_list:
-    print(p[0]+ ', costing '+str(p[2])+' cents')
+    print(p[0]+ ', costing '+str(p[2])+' cents. (Product id is '+str(p[1])+').')
 
 for s in store_list:
   print('\n')

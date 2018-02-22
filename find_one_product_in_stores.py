@@ -1,3 +1,7 @@
+"""
+Search for one item in a set of stores.
+"""
+
 import urllib2
 import json
 from pprint import pprint
@@ -24,7 +28,6 @@ def single_inventory(store,productno):
     return data['result']
   except:
     print 'Inventory cannot be found. Product may be rare or have never been carried here.'
-    print 'Alternatively, check your code :P'
     return
  
 def get_prodno(prod_id):

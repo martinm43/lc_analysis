@@ -1,8 +1,14 @@
 # coding: utf-8
 
-#MAX SQLITE ENTRIES logic comes from Franscesco Montesano, via his answer
-#provided at
-#https://stackoverflow.com/questions/35616602/peewee-operationalerror-too-many-sql-variables-on-upsert-of-only-150-rows-8-c
+"""
+
+MAX SQLITE ENTRIES logic comes from Franscesco Montesano, via his answer
+provided at
+https://stackoverflow.com/questions/35616602/peewee-operationalerror-too-many-sql-variables-on-upsert-of-only-150-rows-8-c
+
+This is a program that inserts data from the LCBO db into my personal database.
+
+"""
 
 from lcbo_db_models import db, Stores, Products
 from lcbo_list_updater import lcbo_list_updater

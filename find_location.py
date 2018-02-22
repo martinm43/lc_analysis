@@ -27,6 +27,6 @@ def coord_termux():
 
 if __name__=="__main__":
     a=coord_ip()
-    b=coord_termux_gps()
+    b=coord_termux()
     print a
     print b
