@@ -11,7 +11,7 @@ def storeselect(coord='AUTO',range=5,input_lat=43.0,input_lon=-75.0):
   conn=sqlite3.connect(cwd+'lcbo_db.sqlite')
   c=conn.cursor()
 
-  from location import coord_termux, coord_ip
+  from find_location import coord_termux, coord_ip
   
   if coord=='AUTO':
     a=coord_termux()

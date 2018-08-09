@@ -3,7 +3,7 @@ database = SqliteDatabase('lcbo_db.sqlite', **{})
 
 #Peewee ORM FTS search functionality. Required for FTS Products
 from playhouse.sqlite_ext import *
-db = SqliteExtDatabase('lcbo_db.sqlite',threadlocals=True)
+db = SqliteExtDatabase('lcbo_db.sqlite') #,threadlocals=True)
 
 class UnknownField(object):
     def __init__(self, *_, **__): pass

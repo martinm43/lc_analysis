@@ -5,7 +5,7 @@ in each store
 """
 
 import sys
-from local_products import single_inventory
+from find_one_product_in_stores import single_inventory
 from lcbo_db_models import Products
 from closest_stores import storeselect
 

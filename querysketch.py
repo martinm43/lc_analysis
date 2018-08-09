@@ -15,7 +15,7 @@ for i in s:
     
     
 for i in s:
-    print i.name, i.postal_code,p.inventory_count
+    print i.name, i.postal_code,i.inventory_count
     
 for i in s:
     print i.name, i.postal_code,i.inventory_count
@@ -37,14 +37,10 @@ s
 s=Stores.select()
 def mins_to_hours(mins):
     return mins/60
-for i in s:
-    print i.name,i.wednesday_open,wednesday_close
     
 for i in s:
     print i.name,i.wednesday_open,i.wednesday_close 
     
-for i in s:
-    print i.name,i.wednesday_open/60,i.wednesday_close/60    
     
 for i in s:
     if i.city=='Etobicoke':
