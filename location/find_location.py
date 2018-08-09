@@ -1,13 +1,18 @@
 #test line. 
 def coord_ip():
-	import requests 
-	import json 
-	send_url = 'http://freegeoip.net/json' 
-	r = requests.get(send_url) 
-	j = json.loads(r.text) 
-	print j
-	lat = j['latitude'] 
-	lon = j['longitude']
+    # This code is now commented out as the API needs to be 
+    # updated - Aug 9 2018
+
+	#import requests 
+	#import json 
+	#send_url = 'http://freegeoip.net/json' 
+	#r = requests.get(send_url) 
+	#j = json.loads(r.text) 
+	#print j
+	#lat = j['latitude'] 
+	#lon = j['longitude']
+    lat = 43.63939293
+    lon = -79.39219069
 	return [lat,lon]
 
 
