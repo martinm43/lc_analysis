@@ -1,40 +1,31 @@
-### Naismith ###
-This is a little project I made to get NBA data using an API that 
-scrapes data from official sources, stores it in a database, 
-and predicst the likelihood of various NBA teams making the playoffs.
-It (the folder) can run on any platform with a Python installation. 
-Uses Monte Carlo simulations (a regular loop based simulation,
-and a much faster, though more memory intensive, vector based 
-simulation)
+FILES:
 
-Done for fun and wanting to learn some Python, Git, iPython, Eclipse...
+closest_stores.py
+- finds closest stores, relies on location which is under development
 
-MAM - June 2017.
+database_updater_python.py
+- updates database of stores and products
 
-MAM - Now about to implement folder functionality in order to better organize work. "Folders/module" version will be new branch 
-      until all files can be confirmed as working.
+find_one_product_in_stores.py
+- finds one product in local stores by ID
 
-MAM, Oct 1 2017: the new files have been updated as required. Folder (aka module) functionality has been added.
-It is known, however, that srscalc is a bit more complex of a problem than first though. A working (?) project exists in GitHub
-but it is written for Python 3. 
+lcbo_db_models.py
+- contains the database models used
 
-Now dropping unused/unverified "intermediate calculation" tables (e.g. advanced stats moving average, or ASMA) as the fundamental 
-calculations behind them are unverified. 
+limited_time_deals.py
 
-To do/considering:
-*DONE: removing unused legacy calculation tables as above (anything related to our srs calculations)
-*DONE: Pythagorean wins expectation function
-*Reviewing and reperforming rest calculations
- *DONE: if rest=0 at beginning of season set to 72
- *DONE: proper ids based on year, game number, and home/away? (optional)
- *investigate the negative rest occurences in the new year.
-*storing playoff odds in a table/figuring out how to automate them in order to produce "odds of making the playoffs" guides
-*tiebreaker logic for playoffs
-*implementing the above "Python 3" library for srscalc
-*removing superfluous print-to-screen statements
-*refining the output files - correcting formating in final output file
-*Making output file optional
-*Laptop: perform regression using Burke odds
-*figuring out how to email them/playoff predictions/expected outcomes of games to personal account
+lydia_query.py
 
-Configured cron job on pi (be sure to change to required directory first)
+name_deals_search.py -
+
+name_search.py
+- Returns a list of matching products by name
+
+apitools/ 
+- obtains data from LCBOAPI
+
+location/ 
+- finds location of user (under development)
+
+products_fts.sql
+- creates the virtual fts table used for searching product names
