@@ -11,9 +11,11 @@ def coord_ip():
 	#print j
 	#lat = j['latitude'] 
 	#lon = j['longitude']
-    lat = 43.63939293
-    lon = -79.39219069
-	return [lat,lon]
+
+    #Default coordinates
+    lat = 43.639238
+    lon = -79.427209
+    return [lat,lon]
 
 
 def coord_termux():
