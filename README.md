@@ -6,6 +6,7 @@ GPS/COORDINATE FUNCTIONALITY ON DESKTOP NO LONGER AVAILABLE
 Note: These scripts rely on coordinates. They work well on phone, but an
 alternative to coord_ip is required as the "API is deprecated".
 See: https://ipstack.com for registration and update guidelines.
+Temporary fix is to used fixed coordinates cooresponding to about Dufferin and King.
 
 SQLITE3 WITH FTS3/FTS4 SUPPORT HAS TO BE COMPILED FOR WINDOWS
 FTS3 is not included in the default windows binary and has to be compiled with FTS3
@@ -13,38 +14,43 @@ support. Main options would be to
  a) recompile a binary with FTS3 support and use that
  b) convert the database into SQL Server and try using that (or create a branch with that)
 
-Scripts:
+ Two different implementations/types are used here: MS SQL Server 2014 and SQLite.
+ 
+=======
+FILES:
 
-bac.py:
-Calculates BAC as python bac.py $num_drinks $hours_passed
+closest_stores.py
+- finds closest stores, relies on location which is under development
 
-database_updater_python.py:
-Updates the main database (by dropping and removing it). Should only be run about 
-every two weeks.
+database_updater_python.py
+- updates database of stores and products
 
-find_location.py:
-Scripts to obtain your location.
+find_one_product_in_stores.py
+- finds one product in local stores by ID
 
-find_one_product_in_stores.py:
-Script to find one object in nearby stores.
+lcbo_db_models.py
+- contains the database models used
 
-lcbo_db_models.py:
-Contains ORM models.
+limited_time_deals.py
 
-lcbo_liquor_asset_total.py:
-Toy script to calculate the total amount of assets held by the LCBO.
+lydia_query.py
 
-limited_time_deals.py:
+name_deals_search.py -
 
-lydia_query.py:
-toy script for creating a list of dry and inexpensive Rieslings
+name_search.py
+- Returns a list of matching products by name
 
-name_deals_search.py:
+apitools/ 
+- obtains data from LCBOAPI
 
-name_search.py:
-Search for products by name
+location/ 
+- finds location of user (under development)
 
-peewee_orm_search_lcbo.py - need to fix FTS search functionality
+SQLITE3
 
-querysketch.py - works but its a trial script
+products_fts.sql
+- creates the virtual fts table used for searching product names
+
+T-SQL
+
 
