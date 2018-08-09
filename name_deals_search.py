@@ -7,7 +7,7 @@ in each store
 import sys
 from find_one_product_in_stores import single_inventory
 from lcbo_db_models import Products
-from closest_stores import storeselect
+from location.closest_stores import storeselect
 
 #Sample string and coordinates but you can always
 #substitute your own

@@ -53,7 +53,7 @@ if __name__ == '__main__':
 
   #Get stores
   #qstorelist=[366,1,362]
-  from closest_stores import storeselect
+  from location.closest_stores import storeselect
   store_num=raw_input('How many stores would you like to search?: ')
   storelist=storeselect(range=store_num)
   print(storelist)
