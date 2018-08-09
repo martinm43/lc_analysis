@@ -2,6 +2,9 @@ import urllib2
 import json
 
 def lcbo_list_updater(qstr,min_page,max_page):
+"""
+Args: table name (products, stores); minimum page (1); maximum page (?)
+"""
   #api_key and initializers
   eggs='MDplNzU3ZjMwNC1mYjkwLTExZTUtODQwYS0xYmFhMTY3ZWUxZWQ6clhlQnAwZFhCNXJvNnJuYWl0SXJQNzYxQWxUaGFhd0hYb0hL'
   #devnote: pages 1 to 500 have already been stored

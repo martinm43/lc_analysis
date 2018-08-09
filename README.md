@@ -1,40 +1,50 @@
-### Naismith ###
-This is a little project I made to get NBA data using an API that 
-scrapes data from official sources, stores it in a database, 
-and predicst the likelihood of various NBA teams making the playoffs.
-It (the folder) can run on any platform with a Python installation. 
-Uses Monte Carlo simulations (a regular loop based simulation,
-and a much faster, though more memory intensive, vector based 
-simulation)
+Turnup - Set of Scripts for Data Analysis of LCBO Database
 
-Done for fun and wanting to learn some Python, Git, iPython, Eclipse...
+Known Issues:
 
-MAM - June 2017.
+GPS/COORDINATE FUNCTIONALITY ON DESKTOP NO LONGER AVAILABLE
+Note: These scripts rely on coordinates. They work well on phone, but an
+alternative to coord_ip is required as the "API is deprecated".
+See: https://ipstack.com for registration and update guidelines.
 
-MAM - Now about to implement folder functionality in order to better organize work. "Folders/module" version will be new branch 
-      until all files can be confirmed as working.
+SQLITE3 WITH FTS3/FTS4 SUPPORT HAS TO BE COMPILED FOR WINDOWS
+FTS3 is not included in the default windows binary and has to be compiled with FTS3
+support. Main options would be to
+ a) recompile a binary with FTS3 support and use that
+ b) convert the database into SQL Server and try using that (or create a branch with that)
 
-MAM, Oct 1 2017: the new files have been updated as required. Folder (aka module) functionality has been added.
-It is known, however, that srscalc is a bit more complex of a problem than first though. A working (?) project exists in GitHub
-but it is written for Python 3. 
+Scripts:
 
-Now dropping unused/unverified "intermediate calculation" tables (e.g. advanced stats moving average, or ASMA) as the fundamental 
-calculations behind them are unverified. 
+bac.py:
+Calculates BAC as python bac.py $num_drinks $hours_passed
 
-To do/considering:
-*DONE: removing unused legacy calculation tables as above (anything related to our srs calculations)
-*DONE: Pythagorean wins expectation function
-*Reviewing and reperforming rest calculations
- *DONE: if rest=0 at beginning of season set to 72
- *DONE: proper ids based on year, game number, and home/away? (optional)
- *investigate the negative rest occurences in the new year.
-*storing playoff odds in a table/figuring out how to automate them in order to produce "odds of making the playoffs" guides
-*tiebreaker logic for playoffs
-*implementing the above "Python 3" library for srscalc
-*removing superfluous print-to-screen statements
-*refining the output files - correcting formating in final output file
-*Making output file optional
-*Laptop: perform regression using Burke odds
-*figuring out how to email them/playoff predictions/expected outcomes of games to personal account
+database_updater_python.py:
+Updates the main database (by dropping and removing it). Should only be run about 
+every two weeks.
 
-Configured cron job on pi (be sure to change to required directory first)
+find_location.py:
+Scripts to obtain your location.
+
+find_one_product_in_stores.py:
+Script to find one object in nearby stores.
+
+lcbo_db_models.py:
+Contains ORM models.
+
+lcbo_liquor_asset_total.py:
+Toy script to calculate the total amount of assets held by the LCBO.
+
+limited_time_deals.py:
+
+lydia_query.py:
+toy script for creating a list of dry and inexpensive Rieslings
+
+name_deals_search.py:
+
+name_search.py:
+Search for products by name
+
+peewee_orm_search_lcbo.py - need to fix FTS search functionality
+
+querysketch.py - works but its a trial script
+

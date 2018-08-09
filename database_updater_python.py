@@ -11,7 +11,7 @@ This is a program that inserts data from the LCBO db into my personal database.
 """
 
 from lcbo_db_models import db, Stores, Products
-from lcbo_list_updater import lcbo_list_updater
+from apitool.lcbo_list_updater import lcbo_list_updater
 assumed_max_pages_stores=100 #100 debug edit
 assumed_max_pages_products=2000 #2000 debug edit
 
