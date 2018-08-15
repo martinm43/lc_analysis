@@ -5,4 +5,4 @@ FROM [MS_lcbo_db].[dbo].[products] as p
 WHERE p.secondary_category='White Wine'
 AND p.origin like '%alsa%'
 AND p.name like '%ries%' 
-ORDER BY p.sugar_in_grams_per_liter ASC, p.price_per_liter_in_cents ASC'
+ORDER BY p.sugar_in_grams_per_liter ASC, p.price_per_liter_in_cents ASC
