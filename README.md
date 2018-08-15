@@ -55,8 +55,12 @@ products_fts.sql
 - creates the virtual fts table used for searching product names
 
 T-SQL QUERIES
+Note that the SQL server database is generated using a linked server
+to the SQLITE3 database. The instructions for doing so are provided here:
+https://www.mssqltips.com/sqlservertip/3087/creating-a-sql-server-linked-server-to-sqlite-to-import-data/
 
 buck_a_beer.sql
-- checks what beers are available 
+- checks the top 50 beers that might be available under the proposed "buck a beer"
+	program
 
 
