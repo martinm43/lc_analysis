@@ -3,7 +3,15 @@ adjust the types of the table as shown below.
 It's easier to do this using a text file. 
 
 Sanitizing the data in Python is tedious (manual checking for 50 values)
-for each item*/
+for each item
+
+SQL creation script is:
+
+select * into [MS_lcbo_db].[dbo].[products]
+from openquery($NAME_OF_LINKED_SERVER, 'select * from products')
+GO
+
+*/
 
 --ntext to varchar.
 
