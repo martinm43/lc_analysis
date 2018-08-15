@@ -16,6 +16,9 @@ support. Main options would be to
 
  Two different implementations/types are used here: MS SQL Server 2014 and SQLite.
  
+PEEWEE
+Version 2.4.7 of the Peewee Python library is required. Most recent version does not work.
+
 =======
 FILES:
 
@@ -46,11 +49,14 @@ apitools/
 location/ 
 - finds location of user (under development)
 
-SQLITE3
+SQLITE3 QUERIES
 
 products_fts.sql
 - creates the virtual fts table used for searching product names
 
-T-SQL
+T-SQL QUERIES
+
+buck_a_beer.sql
+- checks what beers are available 
 
 
