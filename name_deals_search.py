@@ -11,14 +11,12 @@ from location.closest_stores import storeselect
 
 #Sample string and coordinates but you can always
 #substitute your own
-coord_lat=43.72
-coord_lon=-79.58
 
 query=Products.select().where((Products.name.contains(sys.argv[1]))&\
                       (Products.has_limited_time_offer==1))
 
 products_list=[[i.name,i.id,i.price_in_cents] for i in query]
-store_list=storeselect(coord='MANUAL',input_lat=coord_lat.__str__(),input_lon=coord_lon.__str__())
+store_list=storeselect()
 
 #print(products_list)
 #print(store_list)
