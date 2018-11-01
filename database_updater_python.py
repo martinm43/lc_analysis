@@ -51,7 +51,7 @@ def max_sql_variables():
 SQLITE_MAX_VARIABLE_NUMBER=500
 
 #Obtain stores data.
-storedata=lcbo_list_updater('stores',1,assumed_max_pages_stores)
+storedata=lcbo_list_updater('stores',1,assumed_max_pages_stores) #should be assumed max pages
 
 #Check to see if stores table exists. If not, create it.
 if Stores.table_exists() == False:
@@ -62,7 +62,7 @@ with db.atomic() as txn:
     size = (SQLITE_MAX_VARIABLE_NUMBER // len(storedata[0])) -1
     # remove one to avoid issue if peewee adds some variable
     for i in range(0, len(storedata), size):
-        Stores.insert_many(storedata[i:i+size]).upsert().execute()
+        Stores.insert_many(storedata[i:i+size]).on_conflict_replace().execute()
         
 #Obtain products data.
 productdata=lcbo_list_updater('products',1,assumed_max_pages_products)
@@ -75,7 +75,8 @@ if Products.table_exists() == False:
 with db.atomic() as txn:
     size = (SQLITE_MAX_VARIABLE_NUMBER // len(productdata[0])) - 1 
     # remove one to avoid issue if peewee adds some variable
-    for i in range(0, len(productdata), size):Products.insert_many(productdata[i:i+size]).upsert().execute()
+    for i in range(0, len(productdata), size):
+        Products.insert_many(productdata[i:i+size]).on_conflict_replace().execute()
 
 
    
