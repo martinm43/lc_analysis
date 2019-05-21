@@ -2,10 +2,10 @@
 Search for one item in a set of stores.
 """
 
-import urllib2
+import urllib.request, urllib.error, urllib.parse
 import json
 from pprint import pprint
-import urllib
+import urllib.request, urllib.parse, urllib.error
 
 def single_inventory(store,productno):
   """
@@ -22,12 +22,12 @@ def single_inventory(store,productno):
   
   try:
   #print(request_str)
-    req = urllib2.Request(request_str)
+    req = urllib.request.Request(request_str)
     req.add_header('Authorization', 'Token '+eggs)
-    data = json.load(urllib2.urlopen(req))
+    data = json.load(urllib.request.urlopen(req))
     return data['result']
   except:
-    print 'Inventory cannot be found. Product may be rare or have never been carried here.'
+    print('Inventory cannot be found. Product may be rare or have never been carried here.')
     return
  
 def get_prodno(prod_id):
@@ -54,7 +54,7 @@ if __name__ == '__main__':
   #Get stores
   #qstorelist=[366,1,362]
   from location.closest_stores import storeselect
-  store_num=raw_input('How many stores would you like to search?: ')
+  store_num=input('How many stores would you like to search?: ')
   storelist=storeselect(range=store_num)
   print(storelist)
   
@@ -77,16 +77,16 @@ if __name__ == '__main__':
 
   #print qproductno
   #qproductno=qproductno[0][0]
-  qproductno=raw_input('Please enter id of product: ')  
+  qproductno=input('Please enter id of product: ')  
   #print dealslist[0][0]
   #qproduct=dealslist[0][0]    
   
   #Get data from API -is product available?
-  print storelist
-  print 'Product No: ' + str(qproductno)
+  print(storelist)
+  print('Product No: ' + str(qproductno))
   for store in storelist:
     d=single_inventory(store[1],qproductno)
     #print d
     if d!=None:
-      print str(d["quantity"])+' units'+' at '+store[0]
+      print(str(d["quantity"])+' units'+' at '+store[0])
  

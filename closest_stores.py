@@ -33,4 +33,4 @@ def storeselect(coord='AUTO',range=10,input_lat=43.0,input_lon=-75.0):
   
   
 if __name__=='__main__':
-  print storeselect()
+  print(storeselect())

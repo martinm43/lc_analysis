@@ -2,6 +2,10 @@ Turnup - Set of Scripts for Data Analysis of LCBO Database
 
 Known Issues:
 
+*******************
+* LCBOAPI IS DEAD *
+*******************
+
 GPS/COORDINATE FUNCTIONALITY ON DESKTOP NO LONGER AVAILABLE
 Note: These scripts rely on coordinates. They work well on phone, but an
 alternative to coord_ip is required as the "API is deprecated".
