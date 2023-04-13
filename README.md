@@ -1,12 +1,11 @@
-Turnup - Set of Scripts for Data Analysis of LCBO Database
+LC Analysis - Set of Scripts for Data Analysis of LCBO Database
+ARCHIVED
 
 Known Issues:
 
-*******************
-* LCBOAPI IS DEAD *
-*******************
+The LCBOAPI as originally written no longer works as of approximately 2016
+The location functionality used in older versions of Termux to enable these scripts no longer works as of 2016 
 
-GPS/COORDINATE FUNCTIONALITY ON DESKTOP NO LONGER AVAILABLE
 Note: These scripts rely on coordinates. They work well on phone, but an
 alternative to coord_ip is required as the "API is deprecated".
 See: https://ipstack.com for registration and update guidelines.
